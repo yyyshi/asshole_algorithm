@@ -61,5 +61,5 @@ int main()
 		std::cout << arr[i] << "\t";
 	}
 	std::cout << std::endl;
-  return 0;
+        return 0;
 }
