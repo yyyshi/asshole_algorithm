@@ -6,6 +6,13 @@ public:
 	ListNode* next;
 };
 
+// how to remember:
+// rule:
+// t = p->next;
+// p->next = c;
+// c = p;
+// p =t;
+// head linked to the tail
 ListNode* list_reserve(ListNode* head)
 {
 	ListNode* current = nullptr;
