@@ -1,6 +1,6 @@
 #include <iostream>
 
-// 两个有序数组合并
+// merge two sub arr
 void Merge(int r1[], int r2[], int s, int m, int t)
 {
 	int i = s;
@@ -24,30 +24,30 @@ void Merge(int r1[], int r2[], int s, int m, int t)
 	while (j <= t)
 		r2[tmp++] = r1[j++];
 
-	// 排序结果保存在r1中
+	// save result to r1
 	for (int n = s; n <= t; n++)
 	{
 		r1[n] = r2[n];
 	}
 }
 
-// 数组1，数组2，开始index，尾部index。最后排序结果也存储在数组1中
+// arr1，arr2，start index，tail index
 void MergeSort(int r1[], int r2[], int s, int t)
 {
 	// start < tail
 	if (s < t)
 	{
-		// 一个序列数据一分为二
+		// divided to 2 parts
 		int m = (s + t) / 2;
-		// 递归处理子序列
+		// deal with each sub sequence
 		MergeSort(r1, r2, s, m);
 		MergeSort(r1, r2, m + 1, t);
-		// 将分割后排序的子序列做merge
+		// do merge on two sub sequence
 		Merge(r1, r2, s, m, t);
 	}
 }
 
-// 测试
+// simple test
 void main()
 {
 #define  Max_size  7;
