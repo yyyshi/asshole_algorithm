@@ -1,3 +1,6 @@
+#include <vector>
+#inclkude <iostream>
+
 int div_sub_arr(int arr[], int left, int right)
 {
 	// 将arr[left]作为基准
