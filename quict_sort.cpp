@@ -3,33 +3,33 @@
 
 int div_sub_arr(int arr[], int left, int right)
 {
-	// 将arr[left]作为基准
+	// 将arr[left] as pivot
 	int i = left + 1;
 	int j = right;
 	int temp = arr[left];
 
 	while (i <= j)
 	{
-		// 从左边部分找到大于基准的元素
+		// find the element > pivot from left
 		while (arr[i] < temp)
 		{
 			i++;
 		}
-		// 从右边部分找到小于基准的元素
+		// find the element < pivot from right
 		while (arr[j] > temp)
 		{
 			j--;
 		}
 
-		// 两个元素交换位置，同时分别向左向右移动i和j
+		// swap the two elements, and move both index
 		if (i < j)
 			std::swap(arr[i++], arr[j--]);
 		else i++;
 	}
 
-	// 移动基准到正确位置
+	// just the index of the pivot
 	std::swap(arr[j], arr[left]);
-	// 返回基准的index，这个index将原本的arr[]分割成两个部分
+	// return the pivot's new index
 	return j;
 }
 
@@ -38,14 +38,14 @@ void quick_sort(int arr[], int left, int right)
 	if (left > right)
 		return;
 
-	// 分割arr，分隔元素index为j
+	// divided the arr, middle index is j
 	int j = div_sub_arr(arr, left, right);
-	// 以j为分隔线递归分割后的两个子数组
+	// deal with the two sub arr
 	quick_sort(arr, left, j - 1);
 	quick_sort(arr, j + 1, right);
 }
 
-// 测试
+// for test
 int main()
 {
 	int iCount = 6;
