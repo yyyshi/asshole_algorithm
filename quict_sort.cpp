@@ -1,5 +1,5 @@
 #include <vector>
-#inclkude <iostream>
+#include <iostream>
 
 int div_sub_arr(int arr[], int left, int right)
 {
