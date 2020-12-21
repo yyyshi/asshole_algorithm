@@ -4,7 +4,7 @@
 bool find_number_in_array(std::vector<std::vector<int>>& vec, int target)
 {
 	// from vec[max_row][0]:  6
-	int r = vec.size() - 1, c = 0;
+	unsigned r = vec.size() - 1, c = 0;
 	// max row, column
 	while (c >= 0 && r < vec[0].size())
 	{
@@ -35,5 +35,5 @@ int main()
 	int target = 5;
 
 	std::cout << "found " << target << "in 2 binary array, if find the target : " << find_number_in_array(vec, target) << std::endl;
-  return 0;
+        return 0;
 }
