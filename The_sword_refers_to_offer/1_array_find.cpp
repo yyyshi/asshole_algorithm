@@ -23,7 +23,7 @@ bool find_number_in_array(std::vector<std::vector<int>>& vec, int target)
 	return false;
 }
 
-
+// simple test
 int main()
 {
 	std::vector<std::vector<int>> vec = {
