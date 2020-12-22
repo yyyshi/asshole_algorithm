@@ -147,6 +147,6 @@ namespace ns_double_list {
 		// destory double list
 		destory(head);
     
-    return 0;
+                return 0;
 	}
 };
