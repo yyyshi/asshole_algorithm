@@ -7,6 +7,7 @@ void Merge(int r1[], int r2[], int s, int m, int t)
 	int j = m + 1;
 	int tmp = s;
 
+	// save tmp result in r2[]
 	while (i <= m && j <= t)
 	{
 		if (r1[i] <= r1[j])
