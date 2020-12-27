@@ -14,6 +14,25 @@ void bubble_sort(int arr[], int num)
 	}
 }
 
+// a better bubble_sort
+void bubble_sort_better(int arr[], int num)
+{
+	for (int i = 0; i < num)
+	{
+		for (int j = 0; j < num - i - 1; ++j)
+		{
+			bool sorted = true;
+			if (arr[j] < arr[j + 1])
+			{
+				std::swap(arr[j], arr[j + 1]);
+				sorted = false;
+			}
+			
+			if (sorted) break;
+		}
+	}
+}
+
 void print(int arr[], int num)
 {
 	for (int i = 0; i < num; ++i)
