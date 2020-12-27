@@ -24,7 +24,7 @@ void Merge(int r1[], int r2[], int s, int m, int t)
 	while (j <= t)
 		r2[tmp++] = r1[j++];
 
-	// save result to r1
+	// copy sub array data together
 	for (int n = s; n <= t; n++)
 	{
 		r1[n] = r2[n];
