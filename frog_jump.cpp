@@ -1,4 +1,4 @@
-//dp
+// dynamic plan
 int FrogJump(int n) {
 	std::vector<int> dp(n + 1);
 	dp[1] = 1;
@@ -10,7 +10,7 @@ int FrogJump(int n) {
 	return dp[n];
 }
 
-// 
+// recusive func
 int FrogJump(int n)
 {
 	if (n == 1)
