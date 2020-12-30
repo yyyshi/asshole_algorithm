@@ -1,14 +1,9 @@
 // iteration func
-int binarySearchIteration(int array[], int start, int end, int value)
+int binarySearchIteration(int array[], int left, int right, int value)
 {
-	int left = start;
-	int right = end;
-
-	// pos
-	int mid;
 	while (left <= right)
 	{
-		mid = left + (right - left) / 2;
+		int mid = left + (right - left) / 2;
 		// find it
 		if (value == array[mid])
 		{
