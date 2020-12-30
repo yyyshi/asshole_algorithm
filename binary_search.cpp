@@ -62,3 +62,5 @@ int main()
 	pos2 = pos2;
   return 1;
 }
+
+// time complexity O(log n)
