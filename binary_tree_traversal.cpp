@@ -127,7 +127,7 @@ namespace ns_binary_tree_traversal
 		BinaryTree bt;
 		bt.PreOrderPrint(bt.GetRoot());		// 0, 1, 2
 		bt.MidOrderPrint(bt.GetRoot());		// 1, 0, 2
-		bt.SuffixOrderPrint(bt.GetRoot());  // 1, 2, 0
+		bt.SuffixOrderPrint(bt.GetRoot());  	// 1, 2, 0
 		bt.LayerPrint(bt.GetRoot());		// 0, 1, 2
 	}
 };
