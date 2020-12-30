@@ -42,7 +42,8 @@ void print(int arr[], int num)
 	std::cout << std::endl;
 }
 
-void test_bubble_sort()
+// simple test
+void main()
 {
 	int arr[] = {1, 4, 5, 3, 7};
 	int num = 5;
@@ -53,3 +54,6 @@ void test_bubble_sort()
 	std::cout << "after  sort: " << std::endl;
 	print(arr, num);
 }
+
+// time complexity O(n^2)
+// best time complexity O(n)
