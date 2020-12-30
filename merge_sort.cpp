@@ -58,3 +58,5 @@ void main()
 	for (int i = 0; i < Max_size; i++)
 		std::cout << r1[i] << std::ends;
 }
+
+// time complexity O(nlogn)
