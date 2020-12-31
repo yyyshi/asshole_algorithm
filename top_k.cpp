@@ -28,5 +28,5 @@ namespace ns_little_heap
 		}
 	}
   
-  // todo(shiying)
+  // todo(shiying): heap sort
 };
