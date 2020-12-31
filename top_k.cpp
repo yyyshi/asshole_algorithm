@@ -15,7 +15,6 @@ namespace ns_little_heap
 			heap.push(i);
 		}
 
-
 		auto newVec = {10 , 7, 13};
 		for (auto i : newVec)
 		{
