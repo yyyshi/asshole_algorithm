@@ -1,52 +1,44 @@
-#include <iostream>
-
-void print_min_heap(int arr[], int count)
+	void Insert_1(int arr[], int newIdx)
 	{
-		for (int i = 0; i < count; ++i)
+		// 此次insert要操作的值
+		int newValue = arr[newIdx];
+		// 一直比较到根节点
+		while (newIdx > 0)
 		{
-			std::cout << arr[i] << "\t";
-		}
-		std::cout << std::endl;
-	}
-
-	void Insert(int arr[], int index)
-	{
-		int insert = arr[index];
-		// compare with parent node
-		while (index > 0)
-		{
-			int parentIdx = (index - 1) / 2;
-			if (insert < arr[parentIdx])
+			// 找到父节点
+			int parentIdx = (newIdx - 1) / 2;
+			// 需要插入的元素小于(当前是小根堆)该父节点
+			if (newValue < arr[parentIdx])
 			{
-				// parent node down
-				arr[index] = arr[parentIdx];
-				index = parentIdx;
-				if (index == 0)
-				{
-					arr[index] = insert;
-				}
+				// 那么父节点下移
+				arr[newIdx] = arr[parentIdx];
+				// 继续向上检查当前节点的父节点是否平衡，直到检查到根节点
+				newIdx = parentIdx;
+				// 如果发现已经检查到了根节点, 更新根节点的值
+				if (newIdx == 0)
+					arr[0] = newValue;
 			}
-			else // no need to move any node
+			else
 			{
-				// arr[index] = insert;
+				// 当前节点处于平衡状态
 				break;
 			}
 		}
 	}
-
-	// n times insert to create min_heap
 	void CreateMinHeap(int arr[], int count)
 	{
-		for (int i = 1; i < count; i++)
-			Insert(arr, i);
+		// n times insert to create min_heap
+		for (int i = 0; i < count; i++)
+			Insert_1(arr, i);
 
 		// print min_heap
 		print_min_heap(arr, count);
 	}
 
 	// simple test
-	void CreateMinHeap_test()
+	int main()
 	{
 		int arr[] = {6, 3, 2, 1, 5, 0};
 		CreateMinHeap(arr, 6);
+		return 0;
 	}
