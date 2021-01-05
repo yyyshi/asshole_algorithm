@@ -53,6 +53,33 @@ namespace ns_binary_tree_traversal
 			}
 		}
 
+			// self stack traversal
+		void PreOrderTraversal_Stack(ListNode* root)
+		{
+			if (!root)
+			{
+				return;
+			}
+
+			std::stack<ListNode*> stack;
+			stack.push(root);
+			while (!stack.empty())
+			{
+				ListNode* tmp = stack.top();
+				stack.pop();
+				AccessNode(tmp);
+				if (tmp->right)
+				{
+					stack.push(tmp->right);
+				}
+
+				if (tmp->left)
+				{
+					stack.push(tmp->left);
+				}
+			}
+		}
+		
 		void MidOrderPrint(ListNode* root)
 		{
 			if (!root)
