@@ -6,17 +6,17 @@ int div_sub_arr(int arr[], int left, int right)
 	// 将arr[left] as pivot
 	int i = left + 1;
 	int j = right;
-	int temp = arr[left];
+	int tmp = arr[left];
 
 	while (i <= j)
 	{
 		// find the element > pivot from left
-		while (arr[i] < temp)
+		while (arr[i] < tmp)
 		{
 			i++;
 		}
 		// find the element < pivot from right
-		while (arr[j] > temp)
+		while (arr[j] > tmp)
 		{
 			j--;
 		}
