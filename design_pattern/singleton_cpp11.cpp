@@ -6,6 +6,8 @@ public:
 	~Singleton() {
 		std::cout << "descrusture called." << std::endl;
 	}
+	Singleton(const Singleton& s) = delete;
+	void operator=(const Singleton& s) = delete;
 
 	static Singleton& GetInstacne()
 	{
@@ -18,8 +20,6 @@ private:
 	{
 		std::cout << "conscrusture called." << std::endl;
 	}
-	Singleton(const Singleton& s) = delete;
-	void operator=(const Singleton& s) = delete;
 };
 
 // simple test
@@ -32,6 +32,10 @@ void Singleton_test()
 // std::call_once in c++11
 class Singleton2 {
 public:
+	~Singleton2() = default;
+	Singleton2(const Singleton2&) = delete;
+	Singleton2& operator=(const Singleton2&) = delete;
+
 	static Singleton2& GetInstance() {
 		static std::once_flag sflag;
 		std::call_once(sflag, [&]() {
@@ -41,13 +45,8 @@ public:
 		return *pInstance;
 	}
 
-	~Singleton2() = default;
-
 private:
 	Singleton2() = default;
-
-	Singleton2(const Singleton2&) = delete;
-	Singleton2& operator=(const Singleton2&) = delete;
 
 private:
 	static std::unique_ptr<Singleton2> pInstance;
