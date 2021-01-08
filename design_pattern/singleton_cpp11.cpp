@@ -43,10 +43,6 @@ public:
 
 	~Singleton2() = default;
 
-	void PrintAddress() const {
-		std::cout << this << std::endl;
-	}
-
 private:
 	Singleton2() = default;
 
@@ -61,8 +57,5 @@ std::unique_ptr<Singleton2> Singleton2::pInstance;
 
 void Singleton2_test() {
 	Singleton2& s1 = Singleton2::GetInstance();
-	s1.PrintAddress();
-
 	Singleton2& s2 = Singleton2::GetInstance();
-	s2.PrintAddress();
 }
