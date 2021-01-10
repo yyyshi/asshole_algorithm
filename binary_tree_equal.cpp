@@ -14,6 +14,11 @@ namespace ns_binary_tree_equal
 
 		if (root1->data == root2->data)
 		{
+			// different from mirror_binary_tree is:
+			// mirror tree: 1.left, 2.right
+			//              2.left, 1.right
+			// equal  tree: 1.left, 2.left
+			//              1.right, 2.right
 			if (IfBinaryTreeEqual(root1->left, root2->left)
 				&& IfBinaryTreeEqual(root1->right, root2->right)
 				|| IfBinaryTreeEqual(root1->left, root2->right)
