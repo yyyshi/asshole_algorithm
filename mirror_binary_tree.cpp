@@ -27,6 +27,11 @@ namespace ns_mirror_binary_tree
 			return false;
 		}
 
+		// different from equal binary tree
+		// mirror binary tree:  1.left, 2.right
+		// 			2.left, 1.right
+		// equal binary tree:  1.left, 2.left
+		//		       1.right, 2.right
 		return (IfMirrorBinaryTree(root1->left, root2->right)
 			&& IfMirrorBinaryTree(root2->left, root1->right));
 	}
