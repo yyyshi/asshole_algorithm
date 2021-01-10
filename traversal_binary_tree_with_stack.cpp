@@ -55,6 +55,7 @@
 				stack.push(stack.top()->left);
 			}
 
+			// if right node exist, stop to push new left sub node to stack
 			while (!stack.empty())
 			{
 				ListNode* tmp = stack.top();
