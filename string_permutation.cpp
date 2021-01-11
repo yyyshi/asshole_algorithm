@@ -1,29 +1,29 @@
 namespace ns_permutation
 {
-	void permutation(char* str, char* strBegin)
+	void permutation(char* pStr, char* pBegin)
 	{
-		if (*strBegin == '\0')
+		if (*pBegin == '\0')
 		{
-			std::cout << str << std::endl;
+			std::cout << pStr << std::endl;
 		}
 		else
 		{
-			for (char* it = strBegin; *it != '\0'; ++it)
+			for (char* it = pBegin; *it != '\0'; ++it)
 			{
-				std::swap(*it, *strBegin);
-				permutation(str, strBegin + 1);
-				std::swap(*it, *strBegin);
+				std::swap(*it, *pBegin);
+				permutation(pStr, pBegin + 1);
+				std::swap(*it, *pBegin);
 			}
 		}
 	}
-	void permutation(char* str)
+	void permutation(char* pStr)
 	{
-		if (!str)
+		if (!pStr)
 		{
 			return;
 		}
 
-		permutation(str, str);
+		permutation(pStr, pStr);
 	}
 
 	// simple test
