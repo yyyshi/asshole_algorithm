@@ -70,7 +70,41 @@
 			}
 		}
 	}
-  
+	
+	// backward order with self stack
+  	void backward_order_binary_tree_traversal_(TreeNode* root)
+	{
+		if (!root)
+		{
+			return;
+		}
+
+		std::stack<TreeNode*> stack;
+		stack.push(root);
+		TreeNode* pLastPop = root;
+		while (!stack.empty())
+		{
+			while (stack.top()->left)
+			{
+				stack.push(stack.top()->left);
+			}
+
+			while (!stack.empty())
+			{
+				if (pLastPop == stack.top()->right || !(stack.top()->right))
+				{
+					std::cout << stack.top()->data << std::endl;
+					pLastPop = stack.top();
+					stack.pop();
+				}
+				else if (stack.top()->right)
+				{
+					stack.push(stack.top()->right);
+					break;
+				}
+			}
+		}
+	}
 // simple test
 	void PreOrderBinaryTreeWithStack_test()
 	{
