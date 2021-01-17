@@ -4,6 +4,7 @@ namespace ns_permutation
 	{
 		if (*pBegin == '\0')
 		{
+			// pStr, not *pStr
 			std::cout << pStr << std::endl;
 		}
 		else
@@ -11,6 +12,7 @@ namespace ns_permutation
 			for (char* it = pBegin; *it != '\0'; ++it)
 			{
 				std::swap(*it, *pBegin);
+				// pStr, not *pStr
 				permutation(pStr, pBegin + 1);
 				std::swap(*it, *pBegin);
 			}
