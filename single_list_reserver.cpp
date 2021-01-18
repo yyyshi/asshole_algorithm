@@ -13,6 +13,7 @@ public:
 // c = p;
 // p =t;
 // head linked to the tail
+// iteration method
 ListNode* list_reserve(ListNode* head)
 {
 	ListNode* current = nullptr;
@@ -27,6 +28,20 @@ ListNode* list_reserve(ListNode* head)
 	}
 
 	return current;
+}
+
+// reserve list recusive
+ListNode* reserve_list_recusive(ListNode* head)
+{
+	if (!head || !(head->next))
+	{
+		return head;
+	}
+
+	ListNode* newHead = reserve_list_recusive(head->next);
+	head->next->next = head;
+	head->next = nullptr;
+	return newHead;
 }
 
 // simple test
