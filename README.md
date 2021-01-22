@@ -3,7 +3,7 @@ for recording the fucking shit algorithm that preventing me getting my lover off
 
 ## Contents
 - [binary_search.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/binary_search.cpp)
-- [binary_tree_equal.cpp](#binary_tree_equal.cpp）
+- [binary_tree_equal.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/binary_tree_equal.cpp）
 - [binary_tree_traversal.cpp](#binary_tree_traversal.cpp）
 - [bubble_sort.cpp](#bubble_sort.cpp）
 - [create_min_heap.cpp](#create_min_heap.cpp）
