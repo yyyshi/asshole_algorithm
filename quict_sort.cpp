@@ -41,6 +41,7 @@ void quick_sort(int arr[], int left, int right)
 	// divided the arr, middle index is j
 	int j = div_sub_arr(arr, left, right);
 	// deal with the two sub arr
+	// not j--, j++. pay attention!!!
 	quick_sort(arr, left, j - 1);
 	quick_sort(arr, j + 1, right);
 }
