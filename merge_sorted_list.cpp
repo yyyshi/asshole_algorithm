@@ -56,6 +56,8 @@ MListNode* Iteration_merge_sorted_list(MListNode* l1, MListNode* l2)
 	__DummyDeleter deleter(dummy);
 
 	MListNode* head = dummy;
+	
+	// condition still is l1 && l2, not head != nullptr
 	while (l1 && l2)
 	{
 		if (l1->data < l2->data)
