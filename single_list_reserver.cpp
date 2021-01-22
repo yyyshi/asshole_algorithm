@@ -33,6 +33,7 @@ ListNode* list_reserve(ListNode* head)
 // reserve list recusive
 ListNode* reserve_list_recusive(ListNode* head)
 {
+	// todo: head->next shoud not be forget
 	if (!head || !(head->next))
 	{
 		return head;
