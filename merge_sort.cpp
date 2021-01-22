@@ -53,6 +53,9 @@ void main()
 {
 #define  Max_size  7;
 	int r1[Max_size] = {3, 4, 5, 8, 2, 7, 9}, r2[Max_size] = {0};
+	// todo: this test case will not pass pay attention!!!
+	// int r1[7] = {1, 3, 4, 2, 7, 9, 10};
+	// int r2[7] = {0};
 	MergeSort(r1, r2, 0, 6);
 	std::cout << "--------------------------------------------" << std::ends;
 	for (int i = 0; i < Max_size; i++)
