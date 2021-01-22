@@ -1,7 +1,8 @@
 # asshole_algorithm
 for recording the fucking shit algorithm that preventing me getting my lover offers in c++.
 
-### contents
+## Contents
+- [binary_search.cpp](#binary_search.cpp) 
 * binary_search.cpp
 * binary_tree_equal.cpp
 * binary_tree_traversal.cpp
