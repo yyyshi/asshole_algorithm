@@ -25,3 +25,4 @@ for recording the fucking shit algorithm that preventing me getting my lover off
 - [top_k.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/top_k.cpp)
 - [traversal_binary_tree_with_stack.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/traversal_binary_tree_with_stack.cpp)
 - [z_shape_traversal_binary_tree.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/z_shape_traversal_binary_tree.cpp)
+- [binary_tree_path_sum_k.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/binary_tree_path_sum_k.cpp)
