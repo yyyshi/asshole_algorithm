@@ -8,7 +8,7 @@ for recording the fucking shit algorithm that preventing me getting my lover off
 - [bubble_sort.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/bubble_sort.cpp)
 - [create_min_heap.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/create_min_heap.cpp)
 - [fibonacci.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/fibonacci.cpp)
-- [find_number_k_node.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/find_number_k_node.cpp)
+- [find_countdown_number_k_node.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/find_countdown_number_k_node.cpp)
 - [frog_jump.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/frog_jump.cpp)
 - [heap_sort.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/heap_sort.cpp)
 - [merge_sort.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/merge_sort.cpp)
