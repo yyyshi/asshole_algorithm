@@ -61,6 +61,43 @@ namespace ns_z_traversal_binary_tree
 		return allLevel;
 	}
 
+	// level get binary tree
+	std::vector<std::vector<int>> LevelGetBinaryTree(TreeNode* root)
+	{
+		std::vector<std::vector<int>> alllevelData = {};
+		if (!root)
+		{
+			return alllevelData;
+		}
+
+		std::queue<TreeNode*> queue;
+		queue.push(root);
+		while (!queue.empty())
+		{
+			int currentLevelSize = queue.size();
+			std::list<int> currentLevelData = {};
+			for (int i = 0; i < currentLevelSize; ++i)
+			{
+				TreeNode* tmp = queue.front();
+				queue.pop();
+				currentLevelData.push_back(tmp->data);
+				if (tmp->left)
+				{
+					queue.push(tmp->left);
+				}
+
+				if (tmp->right)
+				{
+					queue.push(tmp->right);
+				}
+			}
+
+			alllevelData.emplace_back(std::vector<int>(currentLevelData.begin(), currentLevelData.end()));
+		}
+
+		return alllevelData;
+	}
+
 	void print(const std::vector<std::vector<int>>& allLevel)
 	{
 		for (auto vec : allLevel)
