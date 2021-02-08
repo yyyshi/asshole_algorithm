@@ -5,14 +5,21 @@ void get_binary_tree_mirror_tree(TreeNode* root)
     return;
   }
   
-  if (!root->left || !root->right)
+  if (!root->left && !root->right)
   {
     return;
   }
   
   std::swap(root->left, root->right);
-  get_binary_tree_mirror_tree(root->left);
-  get_binary_tree_mirror_tree(root->right);
+  if (root->left)
+  {
+    get_binary_tree_mirror_tree(root->left);  
+  }
+  
+  if (root->right)
+  {
+    get_binary_tree_mirror_tree(root->right);
+  }
 }
 
 void simple_test()
