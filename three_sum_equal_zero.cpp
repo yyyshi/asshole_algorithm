@@ -12,8 +12,7 @@ vector<vector<int>> threeSumEqualZero2(vector<int>& nums) {
 		{
 			return res;
 		}
-		int left = i + 1;
-		int right = nums.size() - 1;
+
 		// 去重
 		if (i > 0 && nums[i] == nums[i - 1])
 		{
@@ -21,6 +20,8 @@ vector<vector<int>> threeSumEqualZero2(vector<int>& nums) {
 		}
 
 		// 寻找与nums[i]配对的其余两个数
+		int left = i + 1;
+		int right = nums.size() - 1;
 		while (left < right)
 		{
 			int tmpSum = nums[i] + nums[left] + nums[right];
