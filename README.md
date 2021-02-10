@@ -31,3 +31,4 @@ for recording the fucking shit algorithm that preventing me getting my lover off
 - [binary_search_tree2_doubleLinkedList.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/binary_search_tree2_doubleLinkedList.cpp)
 - [skip_list.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/skip_list)
 - [7_bit_encode/code.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/cpp/7_bit_encode/code.cpp)
+- [three_sum_equal_zero.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/cpp/three_sum_equal_zero.cpp)
