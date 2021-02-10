@@ -7,23 +7,29 @@
 		sort(nums.begin(), nums.end());
 		for (int i = 0; i < nums.size(); i++)
 		{
+			// 排序后如果最小的元素大于0，直接返回{}
 			if (nums[i] > 0)
 			{
 				return res;
 			}
 			int left = i + 1;
 			int right = nums.size() - 1;
+			// 去重
 			if (i > 0 && nums[i] == nums[i - 1])
 			{
 				continue;
 			}
 
-			while (left < right) {
+			// 寻找与nums[i]配对的其余两个数
+			while (left < right)
+			{
 				int tmpSum = nums[i] + nums[left] + nums[right];
-				if (tmpSum > 0) {
+				if (tmpSum > 0)
+				{
 					right--;
 				}
-				else if (tmpSum < 0) {
+				else if (tmpSum < 0)
+				{
 					left++;
 				}
 				else
