@@ -32,10 +32,18 @@ namespace ns_my_string
 		strcpy(m_data, rhs.m_data);
 	}
 
+	// self assignment
 	String& String::operator=(const String& rhs)
 	{
 		String tmp(rhs);
 		std::swap(tmp.m_data, this->m_data);
+		return *this;
+	}
+	
+	// pass by value
+	String& String::operator=(String rhs)
+	{
+		std::swap(rhs.m_data, this->m_data);
 		return *this;
 	}
 
