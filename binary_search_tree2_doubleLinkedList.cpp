@@ -1,3 +1,4 @@
+	// pay attention to this *& type
 	void ConvertNodeType(TreeNode* pNode, TreeNode *&list_last)
 	{
 		if (!pNode)
