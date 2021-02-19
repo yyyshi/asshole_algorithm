@@ -35,3 +35,4 @@ for recording the fucking shit algorithm that preventing me getting my lover off
 - [if_binary_search_back_seq.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/if_binary_search_back_seq.cpp)
 - [lru_cache.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/lru_cache.cpp)
 - [mirror_binary_tree_with_queue.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/mirror_binary_tree_with_queue.cpp)
+- [longest_common_sub_seq.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/longest_common_sub_seq.cpp)
