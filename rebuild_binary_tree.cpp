@@ -1,12 +1,12 @@
 	// 根据先序遍历、中序遍历构建二叉树
-	ListNode* reBuildBinaryTree(int preArray[], int preStart, int preEnd, int midArray[], int midStart, int midEnd)
+	TreeNode* reBuildBinaryTree(int preArray[], int preStart, int preEnd, int midArray[], int midStart, int midEnd)
 	{ 
 		// 非法
 		if (preStart > preEnd || midStart > midEnd || preEnd - preStart != midEnd - midStart)
 			return NULL;
 
 		// 1. 确定根节点：先序遍历preArray的第一个元素为根节点
-		ListNode* pNode = new ListNode(preArray[preStart]);
+		TreeNode* pNode = new TreeNode(preArray[preStart]);
 		// 如果是单个节点的树
 		if (preStart == preEnd)
 			return pNode;
@@ -41,7 +41,7 @@
 		return pNode;
 	}
 
-	void LevelOrderPrint(ListNode* pTree)
+	void LevelOrderPrint(TreeNode* pTree)
 	{
 		if (!pTree)
 		{
@@ -66,6 +66,6 @@
 	{
 		int preOrder[] = {1, 2, 4, 3};
 		int midOrder[] = { 2, 4, 1, 3};
-		ListNode* pTree = reBuildBinaryTree(preOrder, 0, 3, midOrder, 0, 3);
+		TreeNode* pTree = reBuildBinaryTree(preOrder, 0, 3, midOrder, 0, 3);
 		LevelOrderPrint(pTree);
 	}
