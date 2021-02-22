@@ -29,12 +29,14 @@
 		// 4. 如果存在左子树，递归构建左子树
 		if (rootIdx > midStart)
 		{
+			// left: start
 			int TreeNodeCount = rootIdx - midStart;
 			pNode->left = reBuildBinaryTree(preArray, preStart + 1, preStart + 1 + (TreeNodeCount - 1), midArray, midStart, midStart + (TreeNodeCount - 1));
 		}
 		// 5. 如果存在右子树，递归构建右子树
 		if (rootIdx < midEnd)
 		{
+			// right: end
 			int TreeNodeCount = midEnd - rootIdx;
 			pNode->right = reBuildBinaryTree(preArray, preEnd - (TreeNodeCount - 1), preEnd, midArray, midEnd - (TreeNodeCount - 1), midEnd);
 		}
