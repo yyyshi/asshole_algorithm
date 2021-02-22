@@ -30,13 +30,13 @@
 		if (rootIdx > midStart)
 		{
 			int TreeNodeCount = rootIdx - midStart;
-			pNode->left = reBuildBinaryTree(preArray, preStart + 1, preStart + 1 + TreeNodeCount - 1, midArray, midStart, midStart + TreeNodeCount - 1);
+			pNode->left = reBuildBinaryTree(preArray, preStart + 1, preStart + 1 + (TreeNodeCount - 1), midArray, midStart, midStart + (TreeNodeCount - 1));
 		}
 		// 5. 如果存在右子树，递归构建右子树
 		if (rootIdx < midEnd)
 		{
 			int TreeNodeCount = midEnd - rootIdx;
-			pNode->right = reBuildBinaryTree(preArray, preEnd - TreeNodeCount + 1, preEnd, midArray, midEnd - TreeNodeCount + 1, midEnd);
+			pNode->right = reBuildBinaryTree(preArray, preEnd - (TreeNodeCount - 1), preEnd, midArray, midEnd - (TreeNodeCount - 1), midEnd);
 		}
 		return pNode;
 	}
