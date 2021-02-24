@@ -26,6 +26,7 @@ int longestCommonSubSeq(const std::string &str1, const std::string &str2)
 		{
 			if (str1[i - 1] == str2[j - 1])
 			{
+				// don't forget to add 1
 				dp[i][j] = dp[i - 1][j - 1] + 1;
 			}
 			else
