@@ -22,6 +22,8 @@ vector<vector<int>> threeSumEqualZero(vector<int>& nums) {
 		// 寻找与nums[i]配对的其余两个数
 		int left = i + 1;
 		int right = nums.size() - 1;
+		
+		// here must can't be: while (left <= right)
 		while (left < right)
 		{
 			int tmpSum = nums[i] + nums[left] + nums[right];
