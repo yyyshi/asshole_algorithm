@@ -39,7 +39,42 @@ namespace ns_mirror_binary_tree
 	{
 		return IfMirrorBinaryTree(root, root);
 	}
+	
+	bool isSymmetric(TreeNode* root) {
+		return check(root, root);
+	}
 
+	bool ifMirrorTree(TreeNode* root1, TreeNode* root2)
+	{
+		std::queue<TreeNode*> queue;
+		queue.push(root1);
+		queue.push(root2);
+
+		while (!queue.empty())
+		{
+			root1 = queue.front();
+			queue.pop();
+			root2 = queue.front();
+			queue.pop();
+
+			if (!root1 && !root2)
+			{
+				continue;
+			}
+
+			if (!root1 || !root2 || root1->data != root2->data)
+			{
+				return false;
+			}
+
+			queue.push(root1->left);
+			queue.push(root2->right);
+			queue.push(root1->right);
+			queue.push(root2->left);
+		}
+
+		return true;
+	}
 // simple test
 //          0
 //        /   \
