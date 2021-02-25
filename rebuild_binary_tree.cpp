@@ -43,6 +43,46 @@
 		return pNode;
 	}
 
+TreeNode* rebuildTree(std::vector<int>& preOrder, std::vector<int>& midOrder) {
+	if (!preOrder.size()) {
+		return nullptr;
+	}
+	TreeNode* root = new TreeNode(preOrder[0]);
+	std::stack<TreeNode*> stack;
+	stack.push(root);
+
+	int rootIdz = 0;
+	for (int i = 1; i < preOrder.size(); ++i)
+	{
+		TreeNode* pNode = stack.top();
+		if (pNode->data != midOrder[rootIdz])
+		{
+			pNode->left = new TreeNode(preOrder[i]);
+			stack.push(pNode->left);
+		}
+		else
+		{
+			while (!stack.empty() && stack.top()->data == midOrder[rootIdz])
+			{
+				pNode = stack.top();
+				stack.pop();
+				++rootIdz;
+			}
+			pNode->right = new TreeNode(preOrder[i]);
+			stack.push(pNode->right);
+		}
+	}
+	return root;
+}
+
+void rebuildTree_test()
+{
+	std::vector<int> preArr = {0, 1, 3, 2};
+	std::vector<int> midArr = {3, 1, 0, 2};
+	TreeNode* root = rebuildTree(preArr, midArr);
+
+	LevelPrintTree(root);  //  0, 1, 2, 3
+}
 	void LevelOrderPrint(TreeNode* pTree)
 	{
 		if (!pTree)
