@@ -52,7 +52,7 @@ TreeNode* rebuildTree(std::vector<int>& preOrder, std::vector<int>& midOrder) {
 	stack.push(root);
 
 	int rootIdz = 0;
-	for (int i = 1; i < preOrder.size(); ++i)
+	for (int i = 1; i < midOrder.size(); ++i)
 	{
 		TreeNode* pNode = stack.top();
 		if (pNode->data != midOrder[rootIdz])
