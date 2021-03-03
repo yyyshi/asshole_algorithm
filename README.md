@@ -38,4 +38,4 @@ for recording the fucking shit algorithm that preventing me getting my lover off
 - [longest_common_sub_seq.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/longest_common_sub_seq.cpp)
 - [reserveString.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/reserveString.cpp)
 - [reverseStringWord.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/reverseStringWord.cpp)
-
+- [find_closest_target_k_elements.cpp](https://github.com/yyyshi/asshole_algorithm/blob/main/find_closest_target_k_elements.cpp)
